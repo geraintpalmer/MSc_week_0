@@ -41,7 +41,7 @@
   \begin{itemize}
     \item Integers: $$\mathbb{Z} = \{\dots, -3, -2, -1, 0, 1, 2, 3, \dots\}$$
     \item Rationals:
-    $$\mathbb{Q} = \left\{ a \nonscript\; | \nonscript\; \exists \nonscript\; p, q \in \mathbb{Z} \text{ for which } a = {p \over q}\right\}$$
+    $$\mathbb{Q} = \left\{ a \; | \; \exists \; p, q \in \mathbb{Z} \text{ for which } a = {p \over q}\right\}$$
     \item Real numbers: $$\mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R}$$
   \end{itemize}
 }
@@ -87,7 +87,7 @@
     \includegraphics[width=7cm]{coordinate_system}
   \end{center}
   The point $(1.3, 0.75)$ is plotted above.\\
-  In general for a point $P = (x, y)$, $x/y$ is called the abscissa/ordinate of
+  In general for a point $P = (x, y)$, $x/y$ is called the abscissa/ ordinate of
   $P$.
 }
 
@@ -242,7 +242,7 @@
   \begin{align*}
     x = {{3 \over 2} \pm \sqrt{\left({3 \over 2}\right)^2 - 4 \times 3 \times(-2)} \over 2 \times 3}
       &\Leftrightarrow
-    x = {{3 \over 2} \pm \sqrt{{9 \over 4} + 24} \over 6}\\
+    x = {{3 \over 2} \pm \sqrt{{9 \over 4} + 24} \over 6}\\[5mm]
     x = {3 \over 12} \pm {{1 \over 2} \sqrt{9 + 96} \over 6}
       &\Leftrightarrow
     x = {1 \over 4} \pm {\sqrt{105} \over 12}
@@ -262,10 +262,10 @@
   \begin{align*}
     x = {2 \pm \sqrt{2^2 - 4 \times 4 \times 7} \over 2 \times 4}
       &\Leftrightarrow
-    x = {2 \pm \sqrt{-108} \over 8}\\
+    x = {2 \pm \sqrt{-108} \over 8}\\[5mm]
     x = {2 \pm \sqrt{i^2108} \over 8}
       &\Leftrightarrow
-    x = {2 \pm i\sqrt{3 \times 36} \over 8}\\
+    x = {2 \pm i\sqrt{3 \times 36} \over 8}\\[5mm]
     x = {2 \pm 6i\sqrt{3}\over8}
       &=
     {1 \over 4} \pm {3 \over 4} i\sqrt{3}
@@ -279,7 +279,7 @@
   \frametitle{Very brief description of Complex Numbers}
   $$i^2 = -1$$
   Complex numbers:
-  $$\mathbb{C} = \left\{a + bi \nonscript\; | \nonscript\; a, b \in \mathbb{R} \right\}$$
+  $$\mathbb{C} = \left\{a + bi \; | \; a, b \in \mathbb{R} \right\}$$
   If $z = a + ib$:
   \begin{itemize}
     \item $a$ is the real part of $z$.
@@ -349,7 +349,12 @@ Various techniques can be used to solve such a problem.
 \frame{
   \frametitle{Examples}
   \begin{itemize}
-    \item Summation: $$\sum_{i=1}^4 i \times 2^{i} = 1 \times 2 + 2 \times 2^2 + 3 \time 2^3 + 4\times 2^4 = 2 + 8 + 3 \times 8 + 4 \times 16 = 98$$
+    \item Summation:
+    \begin{align*}
+      \sum_{i=1}^4 i \times 2^{i}
+        &= 1 \times 2 + 2 \times 2^2 + 3 \time 2^3 + 4\times 2^4\\
+        &= 2 + 8 + 3 \times 8 + 4 \times 16 = 98
+    \end{align*}
     \item Multiplication: $$\prod_{k=1}^3 k^{2} = 1 \times 2^2 \times 3^2 = 36$$
   \end{itemize}
 }
@@ -529,7 +534,7 @@ Various techniques can be used to solve such a problem.
     \item The Product Rule:
     $${d \over dx}\left(f(x)g(x)\right) = g(x){d \over dx}\left(f(x)\right) + f(x){d \over dx}\left(g(x)\right)$$
     \item The Quotient Rule:
-    $${d\ over dx}\left({f(x) \over g(x)}\right) = {g(x){d \over dx}\left(f(x)\right) - f(x){d \over dx}\left(g(x)\right) \over g(x)^2}$$
+    $${d \over dx}\left({f(x) \over g(x)}\right) = {g(x){d \over dx}\left(f(x)\right) - f(x){d \over dx}\left(g(x)\right) \over g(x)^2}$$
   \end{itemize}
 }
 
@@ -606,7 +611,8 @@ Various techniques can be used to solve such a problem.
 
 \frame{
   \frametitle{Solution}
-  Since ${d\ over dx}x^3 = 3x^2$ we have $\int{x^2 dx}={x^3 \over 3}$.
+  Since ${d \over dx}x^3 = 3x^2$ we have $\int{x^2 dx}={x^3 \over 3}$.
+  
   Similarly, since ${d \over dx}\cos(x) = -\sin(x)$ we have:
   $$\int{x^2 + \sin(x)dx} = {x^3 \over 3} - \cos(x) + C$$
   where $C$ is any constant.
@@ -627,7 +633,8 @@ Various techniques can be used to solve such a problem.
   Letting $u = x^4 + 2$, we have $du =4x^3 dx$, thus:
   \begin{align*}
     \int x^3 \cos(x^4 + 2)dx
-      &= \int \cos(u){1 \over 4}du = {1 \over 4} \int \cos(u)du\\
+      &= \int \cos(u){1 \over 4}du\\
+      &= {1 \over 4} \int \cos(u)du\\
       &= {1 \over 4}\sin(u) + C\\
       &= {1 \over 4}\sin(x^4 + 2)+C
   \end{align*}
