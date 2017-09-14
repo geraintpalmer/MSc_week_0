@@ -12,6 +12,9 @@
 \usenavigationsymbolstemplate{}
 \def\insertnavigation#1{\relax}
 
+\definecolor{mathorange}{HTML}{BC5E00}
+\setbeamercolor{math text displayed}{fg=mathorange}
+
 \title{Week 0}
 \author{Geraint Palmer\\Room: M/1.29\\\url{palmergi1@cardiff.ac.uk}\\}
 \date{\tiny{Last updated \today}}
@@ -26,11 +29,14 @@
 
 \frame{
   \frametitle{Algebra}
-  Wikipedia:\\
-  \vspace{.5cm}
-  ``Algebra is the branch of mathematics concerning the study of the rules of
-  operations and relations, and the constructions and concepts arising from
-  them, including terms, polynomials, equations and algebraic structures.''
+	\begin{block}{}
+	  {\large{\textit{``Algebra is the branch of mathematics concerning the
+	  study of the rules of operations and relations, and the constructions and
+	  concepts arising from them, including terms, polynomials, equations and
+	  algebraic structures.''}}}
+	  \vskip5mm
+	  \hspace*\fill{\small--- Wikipedia}
+	\end{block}
 }
 
 
@@ -99,16 +105,18 @@
   \begin{center}
     \includegraphics[width=7cm]{xcubed}
   \end{center}
-  The equation $y = x^3$ is plotted above.
+  \begin{center}
+  $y = x^3$
+  \end{center}
 }
 
 
 \frame{
   \frametitle{Graphs}
-  One particular type of graph is the graph of a line: $$y = mx + b$$
+  Graph of a straight line: $$y = mx + c$$
   \begin{itemize}
     \item $m$ is called the \emph{gradient} of the line.
-    \item $b$ is called the $y$\emph{-intercept} of the line.
+    \item $c$ is called the $y$\emph{-intercept} of the line.
   \end{itemize}
 }
 
@@ -122,19 +130,19 @@
 
 \frame{
   \frametitle{Solution}
-  General form of line $y=mx+b$ through $\{(x_1, y_1),(x_2, y_2)\}$ can be
+  General form of line $y = mx + c$ through $\{(x_1, y_1),(x_2, y_2)\}$ can be
   obtained:
   $$\left.
     \begin{array}{@{}r@{\;}c@{\;}l@{}}
-      y_1 & = & mx_1 + b\\
-      y_2 & = & mx_2 + b
+      y_1 & = & mx_1 + c\\
+      y_2 & = & mx_2 + c
     \end{array}
   \right\}
   \Rightarrow
   \left.
     \begin{array}{@{}r@{\;}c@{\;}l@{}}
       m(x_1 - x_2) & = & y_1 - y_2\\
-      c(a_2 - a_1) & = & a_2 b_1 - a_1 b_1
+      c(x_1 - x_2) & = & y_2 x_1 - y_1 x_1
     \end{array}
   \right\}$$
   which gives:
@@ -158,7 +166,8 @@
 
 \frame{
   \frametitle{Exercise}
-  Where does the line $y = -0.54x + 3.27$ intersect the $y$-axis and the $x$-axis?\\
+  Where does the line $y = -0.54x + 3.27$ intersect the $y$-axis and the
+  $x$-axis?\\
   \pause
   This is equivalent to solving:
   $$y = -0.54 \times 0 + 3.27$$
@@ -172,7 +181,7 @@
 \frame{
   \frametitle{Solving Linear Equations}
   In general equations of the form:
-  $$y=mx+b$$ are solved by muliplying or adding various constants.
+  $$y = mx + c$$ are solved by muliplying or adding various constants.
 
   \begin{align*}
     0 = -0.54x + 3.27
@@ -188,16 +197,16 @@
 \frame{
   \frametitle{Solving Linear Equations}
   In general equations of the form:
-  $$y = mx + b$$ are solved by muliplying or adding various constants.
+  $$y = mx + c$$ are solved by muliplying or adding various constants.
   
   \begin{align*}
-    y = mx + b
+    y = mx + c
       &\Leftrightarrow
-    y - b = (mx + b) - b\\
-    y - b = mx
+    y - c = (mx + c) - c\\
+    y - c = mx
       &\Leftrightarrow
-    (y - b) \times {1 \over m} = mx \times {1 \over m}\\
-    x &= {y - b \over m}
+    (y - c) \times {1 \over m} = mx \times {1 \over m}\\
+    x &= {y - c \over m}
   \end{align*}
 }
 
@@ -388,6 +397,7 @@ Various techniques can be used to solve such a problem.
   \begin{itemize}
     \item True for $n = 0$?:
       $$\sum_{i=0}^0 i = 0 \text{ and }{n(n + 1) \over 2} = 0$$
+    \pause
     \item If true for $n=k$, true for $n=k+1$?:
       $$\sum_{i=0}^{k+1} i= \sum_{i=0}^{k} i + k + 1 ={k(k + 1) \over 2} + k + 1 = {(k + 1)(k + 2) \over 2}$$
   \end{itemize}
@@ -398,10 +408,13 @@ Various techniques can be used to solve such a problem.
 
 \frame{
   \frametitle{Calculus}
-  Wikipedia:\\\vspace{.5cm}
-  ``Calculus is the study of change, in the same way that geometry is the study
-  of shape and algebra is the study of operations and their application to
-  solving equations''
+	\begin{block}{}
+	  {\large{\textit{``Calculus is the study of change, in the same way that
+	  geometry is the study of shape and algebra is the study of operations and
+	  their application to solving equations''}}}
+	  \vskip5mm
+	  \hspace*\fill{\small--- Wikipedia}
+	\end{block}
 }
 
 
@@ -431,7 +444,9 @@ Various techniques can be used to solve such a problem.
 
 \frame{
   \frametitle{Example}
-  The function $f(x) = 3x^3 - 4x - 4$ is plotted below:
+  \begin{center}
+  $f(x) = 3x^3 - 4x - 4$
+  \end{center}
   \begin{center}
     \includegraphics[width=7cm]{complicated_function}
   \end{center}
@@ -500,7 +515,7 @@ Various techniques can be used to solve such a problem.
 
 \frame{
   \frametitle{Exercise}
-    Find the derivative of the function $f(x) = x^2 - 3x + 2$ at the number $a$.
+    Find the derivative of $f(x) = x^2 - 3x + 2$ at the number $a$.
 }
 
 \frame{
@@ -553,7 +568,9 @@ Various techniques can be used to solve such a problem.
 \frame{
   \frametitle{Solution}
   If we let $f(x) = \sqrt{x}$ and $g(x) = x^2 + 1$ then we have:
-  $${d \over dx}f(x)={d \over dx}x^{1 \over 2}={1 \over 2}x^{{1 \over 2} - 1} = {1 \over 2\sqrt{x}}\text{ and } {d \over dx}g(x) = 2x$$
+  $${d \over dx}f(x)={d \over dx}x^{1 \over 2}={1 \over 2}x^{{1 \over 2} - 1} = {1 \over 2\sqrt{x}}$$
+  and
+  $${d \over dx}g(x) = 2x$$
   Using the Chain Rule we have:
    $${d \over dx}F(x)={1 \over 2\sqrt{x^2 + 1}} 2x = {x \over \sqrt{x^2 + 1}}$$
 }
@@ -592,8 +609,9 @@ Various techniques can be used to solve such a problem.
 
 \frame{
   \frametitle{Fundamental Theorem of Calculus}
-  If $f$ is continuous on $[a,b]$ then:
+  If $f$ is continuous on $[a,b]$ then:\newline\newline
   \begin{enumerate}
+    \itemsep2em 
     \item If $g(x) = \int_{a}^x f(t)dt$ then ${d \over dx}g = f$.
     \item $\int_{a}^b f(x)dx = F(b) - F(a)$ where $F$ is any function such that
     ${d \over dx}F = f$.
@@ -702,10 +720,13 @@ Various techniques can be used to solve such a problem.
 \section{Probability}
 
 \frame{
-  \frametitle{Probability}
-  Wikipedia:\\\vspace{.5cm}
-  ``Probability theory is the branch of mathematics concerned with analysis of
-  random phenomena.''
+  \frametitle{Calculus}
+	\begin{block}{}
+	  {\large{\textit{``Probability theory is the branch of mathematics
+	  concerned with analysis of random phenomena.''}}}
+	  \vskip5mm
+	  \hspace*\fill{\small--- Wikipedia}
+	\end{block}
 }
 
 \frame{
