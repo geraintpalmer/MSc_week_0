@@ -9,14 +9,15 @@
 \usepackage{amssymb}
 \usepackage{hyperref}
 \usepackage{lscape}
+\usepackage{multicol}
 \usenavigationsymbolstemplate{}
 \def\insertnavigation#1{\relax}
 
 \definecolor{mathorange}{HTML}{BC5E00}
 \setbeamercolor{math text displayed}{fg=mathorange}
 
-\title{Week 0}
-\subtitle{Algebra, Calculus \& Probability Refresher}
+\title{Algebra, Calculus \& Probability Refresher}
+\subtitle{MSc Week 0}
 \author{Geraint Palmer\\Room: M/1.29\\\url{palmergi1@cardiff.ac.uk}\\}
 \date{\tiny{Last updated \today}}
 
@@ -42,21 +43,25 @@
 
 \frame{
   \frametitle{Exponents}
-  If $a$ and $b$ are any positive real numbers and $x$ and $y$ are any real
-  numbers then:
-  \begin{enumerate}
-    \item $a^x a^y = a^{x+y}$
-    \item $a^0 = 1$
-    \item $a^{-x} = {1 \over a^x}$
-    \item $\left(a^x\right)^y = a^{xy}$
-    \item $a^x b^x = (ab)^x$
-  \end{enumerate}
+  For $a, b \in \mathbb{R^+}$, $x, y \in \mathbb{R}$:
+  \vspace{5mm}
+  \begin{multicols}{2}
+    \begin{enumerate}
+      \itemsep1.5em
+      \item $a^x a^y = a^{x+y}$
+      \item $a^0 = 1$
+      \item $a^{-x} = {1 \over a^x}$
+      \item $\left(a^x\right)^y = a^{xy}$
+      \item $a^x b^x = (ab)^x$
+      \item $a^{1 \over 2} = \sqrt{a}$
+    \end{enumerate}
+  \end{multicols}
 }
 
 \frame{
   \frametitle{Inequalities}
   When solving inequalities it is important to keep in mind whether or not the
-  operation we are using is an \emph{increasing} or a  \emph{decreasing} one.
+  operation we are using is \emph{increasing} or  \emph{decreasing}.
   \begin{center}
     \includegraphics[width=4.5cm]{increasing_plot.pdf}\hspace{1cm}
     \includegraphics[width=4.5cm]{decreasing_plot.pdf}\\
@@ -66,14 +71,12 @@
 
 \frame{
   \frametitle{Coordinates in the plane}
-  The location of a point in a plane can be specified in terms of right handed
-  cartesian axes:
+  Right handed Cartesian axes:
   \begin{center}
-    \includegraphics[width=7cm]{coordinate_system}
+    $(1.3, 0.75)$\\
+    \includegraphics[width=7cm]{coordinate_system}\\
   \end{center}
-  The point $(1.3, 0.75)$ is plotted above.\\
-  In general for a point $P = (x, y)$, $x/y$ is called the abscissa/ ordinate of
-  $P$.
+  For $P = (x, y)$, $x/y$ is called the abscissa / ordinate of $P$.
 }
 
 \frame{
@@ -108,21 +111,14 @@
 
 \frame{
   \frametitle{Solution}
-  General form of line $y = mx + c$ through $\{(x_1, y_1),(x_2, y_2)\}$ can be
-  obtained:
+  General form of $y = mx + c$ through $\{(x_1, y_1),(x_2, y_2)\}$:
   $$\left.
     \begin{array}{@{}r@{\;}c@{\;}l@{}}
       y_1 & = & mx_1 + c\\
       y_2 & = & mx_2 + c
     \end{array}
   \right\}
-  \Rightarrow
-  \left.
-    \begin{array}{@{}r@{\;}c@{\;}l@{}}
-      m(x_1 - x_2) & = & y_1 - y_2\\
-      c(x_1 - x_2) & = & y_2 x_1 - y_1 x_1
-    \end{array}
-  \right\}$$
+  \Rightarrow m(x_1 - x_2) = y_1 - y_2$$
   which gives:
   $$\begin{array}{@{}r@{\;}c@{\;}l@{}}
     m & = & {y_1 - y_2 \over x_1 - x_2}\\[2mm]
@@ -156,33 +152,37 @@
 \frame{
   \frametitle{Solving Linear Equations}
   In general equations of the form:
-  $$y = mx + c$$ are solved by muliplying or adding various constants.
+  $$y = mx + c$$ are solved by multiplying or adding various constants.
 
-  \begin{align*}
-    0 = -0.54x + 3.27
+  \begin{alignat*}{2}
+    0 = -0.54x + 3.27 \quad
       &\Leftrightarrow
-    0 - 3.27 = (-0.54x + 3.27) - 3.27\\
-    -3.27 = -0.54x
+    0 - 3.27 &&= (-0.54x + 3.27) - 3.27\\
       &\Leftrightarrow
-    -3.27 \times {1 \over -0.54} = 0.54x \times {1 \over -.54}\\
-    x &\approx 6.06
-  \end{align*}
+    -3.27 &&= -0.54x\\
+      &\Leftrightarrow
+    -3.27 \times {1 \over -0.54} &&= 0.54x \times {1 \over -0.54}\\
+      &\Leftrightarrow
+    6.06 &&\approx x
+  \end{alignat*}
 }
 
 \frame{
   \frametitle{Solving Linear Equations}
   In general equations of the form:
-  $$y = mx + c$$ are solved by muliplying or adding various constants.
+  $$y = mx + c$$ are solved by multiplying or adding various constants.
   
-  \begin{align*}
+  \begin{alignat*}{2}
     y = mx + c
       &\Leftrightarrow
-    y - c = (mx + c) - c\\
-    y - c = mx
+    y - c &&= (mx + c) - c\\
       &\Leftrightarrow
-    (y - c) \times {1 \over m} = mx \times {1 \over m}\\
-    x &= {y - c \over m}
-  \end{align*}
+    y - c &&= mx\\
+      &\Leftrightarrow
+    (y - c) \times {1 \over m} &&= mx \times {1 \over m}\\
+      &\Leftrightarrow
+    {y - c \over m} &&= x
+  \end{alignat*}
 }
 
 \frame{
@@ -221,10 +221,13 @@
   From the previous formula we have:
   
   \begin{align*}
-    x = {{3 \over 2} \pm \sqrt{\left({3 \over 2}\right)^2 - 4 \times 3 \times(-2)} \over 2 \times 3}
+    x = {-b \pm \sqrt{b^2 - 4ac} \over 2a}
       &\Leftrightarrow
-    x = {{3 \over 2} \pm \sqrt{{9 \over 4} + 24} \over 6}\\[5mm]
-    x = {3 \over 12} \pm {{1 \over 2} \sqrt{9 + 96} \over 6}
+    x = {{3 \over 2} \pm \sqrt{\left({3 \over 2}\right)^2 - 4 \times 3 \times(-2)} \over 2 \times 3}\\
+      &\Leftrightarrow
+    x = {{3 \over 2} \pm \sqrt{{9 \over 4} + 24} \over 6}\\
+      &\Leftrightarrow
+    x = {3 \over 12} \pm {{1 \over 2} \sqrt{9 + 96} \over 6}\\
       &\Leftrightarrow
     x = {1 \over 4} \pm {\sqrt{105} \over 12}
   \end{align*}
@@ -241,20 +244,22 @@
   From the previous formula we have:
 
   \begin{align*}
-    x = {2 \pm \sqrt{2^2 - 4 \times 4 \times 7} \over 2 \times 4}
+    x = {-b \pm \sqrt{b^2 - 4ac} \over 2a}
       &\Leftrightarrow
-    x = {2 \pm \sqrt{-108} \over 8}\\[5mm]
-    x = {2 \pm \sqrt{i^2108} \over 8}
+    x = {2 \pm \sqrt{2^2 - 4 \times 4 \times 7} \over 2 \times 4}\\
       &\Leftrightarrow
-    x = {2 \pm i\sqrt{3 \times 36} \over 8}\\[5mm]
-    x = {2 \pm 6i\sqrt{3}\over8}
-      &=
-    {1 \over 4} \pm {3 \over 4} i\sqrt{3}
+    x = {2 \pm \sqrt{-108} \over 8}\\
+      &\Leftrightarrow
+    x = {2 \pm \sqrt{i^2108} \over 8}\\
+      &\Leftrightarrow
+    x = {2 \pm i\sqrt{3 \times 36} \over 8}\\
+      &\Leftrightarrow
+    x = {2 \pm 6i\sqrt{3}\over8} = {1 \over 4} \pm {3 \over 4} i\sqrt{3}
 \end{align*}
 }
 
 \frame{
-  \frametitle{Very brief description of Complex Numbers}
+  \frametitle{Complex Numbers}
   $$i^2 = -1$$
   Complex numbers:
   $$\mathbb{C} = \left\{a + bi \; | \; a, b \in \mathbb{R} \right\}$$
@@ -275,27 +280,6 @@
     2x - 2y &= -2
   \end{align*}
 Various techniques can be used to solve such a problem.
-}
-
-\frame{
-  \frametitle{Elimination of Variables}
-  \begin{itemize}
-    \item Use first equation to obtain expression for first variable as a
-    function of other variables.
-    \item Substitute and use second equation to obtain expression for second
-    variable as a function of other variables.
-    \item etc...
-  \end{itemize}
-}
-
-\frame{
-  \frametitle{Exercise}
-  Solve:
-
-  \begin{align*}
-    3x + 2y &= 1\\
-    2x - 2y &= -2
-  \end{align*}
 }
 
 \frame{
@@ -359,11 +343,27 @@ Various techniques can be used to solve such a problem.
   \frametitle{Solution}
   \begin{itemize}
     \item True for $n = 0$?:
-      $$\sum_{i=0}^0 i = 0 \text{ and }{n(n + 1) \over 2} = 0$$
+      $$\sum_{i=0}^0 i = 0 \; \text{ \color{black}{and} } \; {n(n + 1) \over 2} = 0$$
     \pause
     \item If true for $n=k$, true for $n=k+1$?:
-      $$\sum_{i=0}^{k+1} i= \sum_{i=0}^{k} i + k + 1 ={k(k + 1) \over 2} + k + 1 = {(k + 1)(k + 2) \over 2}$$
+      \begin{alignat*}{2}
+        \sum_{i=0}^{k+1} i \; &= \; \sum_{i=0}^{k} i &&+ k + 1\\
+        &= \; {k(k + 1) \over 2} &&+ k + 1\\
+        &= \; {(k + 1)(k + 2) \over 2}
+      \end{alignat*}
   \end{itemize}
+}
+
+\frame{
+  \frametitle{Infinite Sums}
+  \vfill
+  $$\sum_{k=0}^\infty a^k = {a \over {1 - a}}$$
+  \vfill
+  $$\sum_{k=0}^\infty k a^k = {a \over {(1 - a)^2}}$$
+  \vfill
+  $$\sum_{k=0}^\infty {{a^k} \over k!} = e^a$$
+  \vfill
+  \small{\url{https://en.wikipedia.org/wiki/List_of_mathematical_series}}
 }
 
 \frame{
@@ -376,7 +376,6 @@ Various techniques can be used to solve such a problem.
   \frametitle{Functions}
   A function $f$ is a rule that assigns to each element $x$ in a set $D$ exactly
   one element, called $f(x)$, in a set $E$.
-  \pause
   \begin{center}
     \includegraphics[width=7cm]{function}
   \end{center}
@@ -407,15 +406,13 @@ Various techniques can be used to solve such a problem.
 \frame{
   \frametitle{Even and Odd Functions}
   \begin{itemize}
-    \item If a function $f$ satisfies $f(-x) = f(x)$ for all $x$ in its domain
-    then $f$ is called an even function:
+    \item If $f(-x) = f(x)$ for all $x$ in its domain then $f$ is \textit{even}:
     \begin{center}
-      \includegraphics[width=4cm]{even_function}
+      \includegraphics[width=5cm]{even_function}
     \end{center}
-    \item If a function $f$ satisfies $f(-x) = -f(x)$ for all $x$ in its domain
-    then $f$ is called an odd function:
+    \item If $f(-x) = -f(x)$ for all $x$ in its domain then $f$ is \textit{odd}:
     \begin{center}
-      \includegraphics[width=4cm]{odd_function}
+      \includegraphics[width=5cm]{odd_function}
     \end{center}
   \end{itemize}
 }
@@ -464,7 +461,7 @@ Various techniques can be used to solve such a problem.
 
 \frame{
   \frametitle{Exercise}
-    Find the derivative of $f(x) = x^2 - 3x + 2$ at the number $a$.
+    Find the derivative of $$f(x) = x^2 - 3x + 2$$ at the number $a$.
 }
 
 \frame{
@@ -488,7 +485,7 @@ Various techniques can be used to solve such a problem.
     \item The Constant Multiple Rule:
     $${d \over dx}\left(cf(x)\right) = c{d \over dx}\left(f(x)\right)$$
     \item The Sum Rule:
-    $${d \over dx}\left(f(x) + g(x)\right) = {d \over dx}\left(f(x)\right) + {d \over dx}\left(g(x)\right)$$
+    $$(f + g)' = f' + g'$$
 \end{itemize}
 }
 
@@ -496,17 +493,16 @@ Various techniques can be used to solve such a problem.
   \frametitle{Rules of Differentiation}
   \begin{itemize}
     \item The Product Rule:
-    $${d \over dx}\left(f(x)g(x)\right) = g(x){d \over dx}\left(f(x)\right) + f(x){d \over dx}\left(g(x)\right)$$
+    $$(fg)' = f'g + fg'$$
     \item The Quotient Rule:
-    $${d \over dx}\left({f(x) \over g(x)}\right) = {g(x){d \over dx}\left(f(x)\right) - f(x){d \over dx}\left(g(x)\right) \over g(x)^2}$$
+    $$\left({f \over g}\right)' = {f'g - fg' \over g^2}$$
   \end{itemize}
 }
 
 \frame{
   \frametitle{The Chain Rule}
-  If $g$ and $f$ are two functions with derivatives $g'$ and $f'$ respectively
-  then:
-  $${d \over dx}\left(f(g(x))\right) = f'(g(x))g'(x)$$
+  If $f\left(g(x)\right) = f \circ g$:
+  $$\left(f \circ g\right)' = \left(f' \circ g\right)g'$$
 }
 
 \frame{
@@ -516,12 +512,28 @@ Various techniques can be used to solve such a problem.
 
 \frame{
   \frametitle{Solution}
-  If we let $f(x) = \sqrt{x}$ and $g(x) = x^2 + 1$ then we have:
-  $${d \over dx}f(x)={d \over dx}x^{1 \over 2}={1 \over 2}x^{{1 \over 2} - 1} = {1 \over 2\sqrt{x}}$$
+  If we let $f(x) = \sqrt{x} = x^{1 \over 2}$ and $g(x) = x^2 + 1$ then we have:
+  $$f' = {1 \over 2}x^{-{1 \over 2}} = {1 \over 2\sqrt{x}}$$
   and
-  $${d \over dx}g(x) = 2x$$
+  $$g' = 2x$$
   Using the Chain Rule we have:
-   $${d \over dx}F(x)={1 \over 2\sqrt{x^2 + 1}} 2x = {x \over \sqrt{x^2 + 1}}$$
+  \begin{align*}
+    F'(x)
+      &= \left({1 \over 2\sqrt{x^2 + 1}}\right)\left(2x\right)\\
+      &= {x \over \sqrt{x^2 + 1}}
+  \end{align*}
+}
+
+\frame{
+  \frametitle{Table of Derivatives}
+  $$\begin{array}{@{}l@{}}
+    \displaystyle{{d \over dx}\sin(x) = \cos(x)}\\[3mm]
+    \displaystyle{{d \over dx}\cos(x) = -\sin(x)}\\[3mm]
+    \displaystyle{{d \over dx}\tan(x) = \sec^2(x)}\\[3mm]
+  \end{array}$$
+  \begin{center}
+    \scriptsize{\url{http://www.math.wustl.edu/~freiwald/131derivativetable.pdf}}
+  \end{center}
 }
 
 \frame{
@@ -534,15 +546,24 @@ Various techniques can be used to solve such a problem.
 }
 
 \frame{
-  \frametitle{Trigonometric Functions}
-  $$\begin{array}{@{}l@{\;\;\;}l@{}}
-    \displaystyle{{d \over dx}\sin(x) = \cos(x)} &
-    \displaystyle{{d \over dx}\csc(x) = -\csc(x)\cot(x)}\\[3mm]
-    \displaystyle{{d \over dx}\cos(x) = -\sin(x)}&
-    \displaystyle{{d \over dx}\sec(x) = \sec(x)\tan(x)}\\[3mm]
-    \displaystyle{{d \over dx}\tan(x) = \sec^2(x)}&
-    \displaystyle{{d \over dx}\cot(x) = -\csc^2(x)}
-  \end{array}$$
+  \frametitle{Logarithms}
+  $$\log_a{a^b} = b$$
+  $$3^x = 81 \Leftrightarrow x = \log_3{81} = 4$$
+}
+
+\frame{
+  \frametitle{Naural Logarithm}
+  $$\ln x =\log_e x$$
+  $$y = e^x \Leftrightarrow x = \ln y$$
+}
+
+\frame{
+  \frametitle{Logarithms in Statistics}
+  In the following graph the red dots are contracted by $\log$.
+  This is a standard procedure sometimes used when analysing data.
+  \begin{center}
+    \includegraphics[width=7cm]{log_example}
+  \end{center}
 }
 
 \frame{
@@ -554,53 +575,36 @@ Various techniques can be used to solve such a problem.
 
 \frame{
   \frametitle{Fundamental Theorem of Calculus}
-  If $f$ is continuous on $[a,b]$ then:\newline\newline
+  Let $f$, $F$ be continuous on $[a,b]$ then:\newline
   \begin{enumerate}
-    \itemsep2em 
-    \item If $g(x) = \int_{a}^x f(t)dt$ then ${d \over dx}g = f$.
-    \item $\int_{a}^b f(x)dx = F(b) - F(a)$ where $F$ is any function such that
-    ${d \over dx}F = f$.
-\end{enumerate}}
+    \itemsep1.5em
+    \item If $F(x) = \int_{a}^x f(t)dt$ then $F' = f$.
+    \item $\int_{a}^b f(x)dx = F(b) - F(a)$
+\end{enumerate}
+\vspace{20mm}
+\pause
+$$\int f(x)dx = F(x) \; \text{ \color{black}{means} } \; {d \over dx}F=f$$
+}
 
 \frame{
-  \frametitle{Indefinite Integrals}
-  $$\int f(x)dx = F(x)\text{ means }{d \over dx}F=f$$
+  \frametitle{Tables of Indefinite Integrals}
+  $$\begin{array}{@{}l@{}}
+    \displaystyle{\int x^n dx = {x^{n + 1} \over n + 1} + C \qquad \qquad \color{black}{(n \ne -1)}}\\[3mm]
+    \displaystyle{\int cf(x) dx = c \int f(x)dx}\\[3mm]
+    \displaystyle{\int \left(f(x) + g(x)\right)dx = \int f(x)dx + \int g(x) dx}\\[3mm]
+    \vdots
+  \end{array}$$
+  \begin{center}
+    \scriptsize{\url{http://integral-table.com/downloads/single-page-integral-table.pdf}}
+  \end{center}
 }
 
 \frame{
   \frametitle{Exercise}
   Calculate: $$\int{x^2 + \sin(x)dx}$$
-}
-
-\frame{
-  \frametitle{Solution}
-  Since ${d \over dx}x^3 = 3x^2$ we have $\int{x^2 dx}={x^3 \over 3}$.
-  
-  Similarly, since ${d \over dx}\cos(x) = -\sin(x)$ we have:
+  \vspace{20mm}
+  \pause
   $$\int{x^2 + \sin(x)dx} = {x^3 \over 3} - \cos(x) + C$$
-  where $C$ is any constant.
-}
-
-\frame{
-  \frametitle{The Substitution Rule}
-  If $u = g(x)$ then: $$\int f(g(x))g'(x)dx = \int f(u)du$$
-}
-
-\frame{
-  \frametitle{Exercise}
-  Calculate: $$\int x^3 \cos(x^4+2)dx$$
-}
-
-\frame{
-  \frametitle{Solution}
-  Letting $u = x^4 + 2$, we have $du =4x^3 dx$, thus:
-  \begin{align*}
-    \int x^3 \cos(x^4 + 2)dx
-      &= \int \cos(u){1 \over 4}du\\
-      &= {1 \over 4} \int \cos(u)du\\
-      &= {1 \over 4}\sin(u) + C\\
-      &= {1 \over 4}\sin(x^4 + 2)+C
-  \end{align*}
 }
 
 \frame{
@@ -625,40 +629,25 @@ Various techniques can be used to solve such a problem.
 }
 
 \frame{
-  \frametitle{Tables of Indefinite Integrals}
-  $$\begin{array}{@{}l@{}}
-    \displaystyle{\int cf(x) dx = c \int f(x)dx}\\[3mm]
-    \displaystyle{\int \left(f(x) + g(x)\right)dx = \int f(x)dx + \int g(x) dx}\\[3mm]
-    \displaystyle{\int x^n dx = {x^{n + 1} \over n + 1} + C\;(n \ne -1)}\\[3mm]
-    \displaystyle{\int {1 \over x} dx = ln(|x|) + C}\\[3mm]
-    \displaystyle{\int e^x dx = e^x + C}\\[3mm]
-    \displaystyle{\int a^x dx = {a^x \over \ln{a}} + C}\\[3mm]
-    \vdots
-  \end{array}$$
+  \frametitle{The Substitution Rule}
+  If $u = g(x)$ then: $$\int f(g(x))g'(x)dx = \int f(u)du$$
 }
 
 \frame{
-  \frametitle{Integration is \dots}
-  \begin{itemize}
-    \item Differentiation requires the application of rules (following a recipe).
-    \item Integration is an art.
-  \end{itemize}
+  \frametitle{Exercise}
+  Calculate: $$\int x^3 \cos(x^4+2)dx$$
 }
 
 \frame{
-  \frametitle{Logarithms}
-  By definition: $$\log_a{a^b} = b$$
-  ``Natural Log'': $$\ln x =\log_e x$$
-  (recall:) $$\int {1 \over x} dx = ln(|x|) + C$$
-}
-
-\frame{
-  \frametitle{Use of Logarithms in Statistics}
-  In the following graph the red dots are contracted by $\log$.
-  This is a standard procedure sometimes used when analysing data.
-  \begin{center}
-    \includegraphics[width=7cm]{log_example}
-  \end{center}
+  \frametitle{Solution}
+  Letting $u = x^4 + 2$, we have $du =4x^3 dx$, thus:
+  \begin{align*}
+    \int x^3 \cos(x^4 + 2)dx
+      &= \int \cos(u){1 \over 4}du\\
+      &= {1 \over 4} \int \cos(u)du\\
+      &= {1 \over 4}\sin(u) + C\\
+      &= {1 \over 4}\sin(x^4 + 2)+C
+  \end{align*}
 }
 
 \frame{
