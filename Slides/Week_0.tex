@@ -59,15 +59,21 @@
 }
 
 \frame{
-  \frametitle{Inequalities}
-  When solving inequalities it is important to keep in mind whether or not the
-  operation we are using is \emph{increasing} or  \emph{decreasing}.
-  \begin{center}
-    \includegraphics[width=4.5cm]{increasing_plot.pdf}\hspace{1cm}
-    \includegraphics[width=4.5cm]{decreasing_plot.pdf}\\
-    $a < b\Rightarrow f(a) < f(b)$ \hspace{2.5cm} $a < b \Rightarrow g(a) > g(b)$
-  \end{center}
+  \frametitle{Logarithms}
+  $$\log_a{a^b} = b$$
+  $$3^x = 81 \Leftrightarrow x = \log_3{81} = 4$$
 }
+
+% \frame{
+%   \frametitle{Inequalities}
+%   When solving inequalities it is important to keep in mind whether or not the
+%   operation we are using is \emph{increasing} or  \emph{decreasing}.
+%   \begin{center}
+%     \includegraphics[width=4.5cm]{increasing_plot.pdf}\hspace{1cm}
+%     \includegraphics[width=4.5cm]{decreasing_plot.pdf}\\
+%     $a < b\Rightarrow f(a) < f(b)$ \hspace{2.5cm} $a < b \Rightarrow g(a) > g(b)$
+%   \end{center}
+% }
 
 \frame{
   \frametitle{Coordinates in the plane}
@@ -546,12 +552,6 @@ Various techniques can be used to solve such a problem.
 }
 
 \frame{
-  \frametitle{Logarithms}
-  $$\log_a{a^b} = b$$
-  $$3^x = 81 \Leftrightarrow x = \log_3{81} = 4$$
-}
-
-\frame{
   \frametitle{Naural Logarithm}
   $$\ln x =\log_e x$$
   $$y = e^x \Leftrightarrow x = \ln y$$
@@ -658,38 +658,41 @@ $$\int f(x)dx = F(x) \; \text{ \color{black}{means} } \; {d \over dx}F=f$$
 
 \frame{
   \frametitle{Random Variables}
-  In experiments or trials in which the outcome is numerical, the outcomes are
-  values of what is known as a random variable.\\
-  \vspace{.5cm}
-  For example, suppose that a coin is spun 3 times and we record the outcomes
-  and ask: how many heads appear? If we denote the random variable associated
-  with the number of heads by $X$ and denote the sample space by $S_X$ then we
-  have: $$S_X = \{0, 1, 2, 3\}$$
+  In trials where the outcome is numerical, the outcomes are values of random
+  variables.\\
+  \vspace{0.5cm}
+  Example: A coin is spun 3 times, how many heads appear?
+  Denote the random variable associated with the number of heads by $X$.
+  Denote the sample space by $S_X$ then:
+  $$S_X = \{0, 1, 2, 3\}$$
 }
 
 \frame{
-  \frametitle{Probability Distributions for Discrete Random Variables}
-  The probability distribution $P(X = x_i) = p_i$ has the following properties:
+  \frametitle{Discrete Probability Distributions}
+  For a probability distribution $P(X = x_i) = p_i$:\\
   \begin{itemize}
+    \itemsep1.5em
     \item $0 \leq p_i \leq 1$
-    \item $\sum_{i=1}^n p_i = 1$, if $X$ has $n$ possible outcomes, or
-    $\sum_{i=1}^\infty p_i = 1$ if $X$ has a countably infinite set of outcomes
+    \item All probabilities sum to $1$:
+    \begin{itemize}
+      \itemsep1.5em
+      \item $\sum_{i=1}^n p_i = 1$ if $X$ has $n$ possible outcomes
+      \item $\sum_{i=1}^\infty p_i = 1$ if $X$ has a countably infinite set of outcomes
+    \end{itemize}
   \end{itemize}
 }
 
 \frame{
   \frametitle{Exercise}
-  Write down the probability distribution for the random variable $X$ associated
-  with the rolling of a six sided dice.
-}
-
-\frame{
-  \frametitle{Solution}
-  We have $S_X = \{1, 2, 3, 4, 5, 6\}$ and $P(X = x_i)={1 \over 6 }$ for all $i$:
+  Write down the state space and probability distribution for the random
+  variable $X$ associated with the rolling of a six sided die.
+  \pause
+  $$S_X = \{1, 2, 3, 4, 5, 6\}$$
   \begin{center}
-    \begin{tabular}{l|cccccc}
-      $x_i$ & 1 & 2 & 3 & 4 & 5 & 6 \\[2mm]
+    \begin{tabular}{r|cccccc}
+      $x_i$ & 1 & 2 & 3 & 4 & 5 & 6 \\
       \hline
+      \\[-1em]
       $P(X=x_i)$ & ${1 \over 6}$ & ${1 \over 6}$ & ${1 \over 6}$ & ${1 \over 6}$ & ${1 \over 6}$ & ${1 \over 6}$
     \end{tabular}
   \end{center}
@@ -697,8 +700,7 @@ $$\int f(x)dx = F(x) \; \text{ \color{black}{means} } \; {d \over dx}F=f$$
 
 \frame{
   \frametitle{Cumulative Distribution for Discrete Random Variables}
-  For a given probability distribution $P(X=x_i)=p_i$ we have the cumulative
-  distribution $F(x) = P(X \leq x)$:
+  For $P(X=x_i) = p_i$ the cumulative distribution $F(x) = P(X \leq x)$:
   $$F(x) = \sum_{i=1}^{x}P(X = x_i)$$
 }
 
@@ -706,49 +708,72 @@ $$\int f(x)dx = F(x) \; \text{ \color{black}{means} } \; {d \over dx}F=f$$
   \frametitle{Exercise}
   Write down the cumulative probability distribution for the random variable
   $X$ associated with the rolling of a six sided dice.
-}
-
-\frame{
-\frametitle{Solution}
-  We have $S_X = \{1, 2, 3, 4, 5, 6\}$ and $P(X = x_i)={1 \over 6 }$ for all $i$:
+  \pause
   \begin{center}
-    \begin{tabular}{l|cccccc}
+    \begin{tabular}{r|cccccc}
       $x_i$ & 1 & 2 & 3 & 4 & 5 & 6 \\
       \hline
+      \\[-1em]
       $P(X = x_i)$ & ${1 \over 6}$ & ${1 \over 6}$ & ${1 \over 6}$ & ${1 \over 6}$ & ${1 \over 6}$ & ${1 \over 6}$\\[2mm]
       \hline
+      \\[-1em]
       $F(x_i)$ & ${1 \over 6}$ & ${2 \over 6}$ & ${3 \over 6}$ & ${4 \over 6}$ & ${5 \over 6}$ & $1$\\[2mm]
     \end{tabular}
   \end{center}
 }
 
 \frame{
-  \frametitle{Probability Distributions for Continuous Random Variables}
-  In many applications the discrete random variable which takes its values from
-  a countable list is inappropriate.
-  For example, the random variable $X$ could be the time from, say, $t = 0$,
-  until a light bulb fails.
-  In these cases we use a continuous random variable, which is defined for the
-  continuous variable $t \geq 0$, and is no longer a countable list of values.\\
-  Instead of the sequence of probabilities $\{P(X = x_i)\}$, we define a
-  probability density function $f(x)$ over $\mathbb{R}$ which has the
-  properties:
+  \frametitle{Mean and Variance}
+  Mean / Average / Expected Value:
+  $$E(X) = \sum_{i=1}^n x_i p_i$$
+  Variance:
+  $$Var(X) = \sum_{i=1}^n \left(x_i - E(X)\right)^2 p_i$$
+}
+
+\frame{
+  \frametitle{Exercise}
+  Calculate the mean and variance for the random variable $X$ associated with
+  the rolling of a six sided dice.\\
+  \pause
+  \vspace{5mm}
+  Mean:
+  \begin{align*}
+    E(X) &= {0 \over 6} + {1 \over 6} + {2 \over 6} + {3 \over 6} + {4 \over 6} + {5 \over 6} + {6 \over 6}\\
+    &= 3.5
+  \end{align*}
+  Variance:
+  \small{
+  \begin{align*}
+    Var(X) &= {(0 - 3.5)^2 \over 6} + {(1 - 3.5)^2 \over 6} + {(2 - 3.5)^2 \over 6} + {(3 - 3.5)^2 \over 6}\\
+    &+ {(4 - 3.5)^2 \over 6} + {(5 - 3.5)^2 \over 6} + {(6 - 3.5)^2 \over 6}\\
+    &\approx 2.9
+  \end{align*}
+  }
+}
+
+\frame{
+  \frametitle{Continuous Random Variables}
+  The random variable $X$ is the time from $t = 0$ until a light bulb fails.
+  $X$ is a continuous random variable, defined for the continuous variable
+  $t \geq 0$, and is not a countable list of values.\\
+  \vspace{5mm}
+  Define a probability density function $f(x)$ over $\mathbb{R}$:
   \begin{itemize}
     \item $f(x) \geq 0$
     \item $\int_{-\infty}^{\infty}f(x)dx = 1$
-    \item for any $x_1 < x_2$: $$P(x_1 \leq X \leq x_2) = \int_{x_1}^{x_2}f(x)dx$$
+    \item for any $x_1 < x_2$: $$P(x_1 \leq X \leq x_2) = \int_{x_1}^{x_2} f(x)dx$$
   \end{itemize}
 }
 
 \frame{
-  \frametitle{Cumulative Distribution for Continuous Random Variables}
-  $$F(x) = P(X \leq x) = \int_{-\infty}^xf(u)du$$
+  \frametitle{Continuous CDF}
+  $$F(x) = P(X \leq x) = \int_{-\infty}^x f(u)du$$
 }
 
 \frame{
   \frametitle{Mean and Variance of Continuous Random Variables}
-  Mean: $$E(X) = \int_{-\infty}^{\infty}xf(x)dx$$
-  Variance: $$Var(X) = \int_{-\infty}^{\infty}(x - E(X))f(x)dx$$
+  Mean: $$E(X) = \int_{-\infty}^{\infty}x f(x)dx$$
+  Variance: $$Var(X) = \int_{-\infty}^{\infty} \left(x - E(X)\right)^2 f(x)dx$$
 }
 
 \frame{\frametitle{Exercise}
