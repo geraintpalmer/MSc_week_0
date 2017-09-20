@@ -65,6 +65,21 @@
 }
 
 \frame{
+  \frametitle{Functions}
+  Evaluate the function $f$ when $a = 4$, $b = 2$, $c = -5$:
+  $$f(a, b, c) = {a \over b} + 4c - a^2c + 10\left(a + b\right)$$
+  \pause
+  Solution:
+  \begin{align*}
+    f(4, 2, -5)
+      &= {4 \over 2} + \left(4 \times -5\right) - \left(4^2 \times -5\right) + 10\left(4 + 2\right)\\
+      &= 2 - 20 - \left(16 \times -5\right) + 10\left(6\right)\\
+      &= 2 - 20 + 80 + 60\\
+      &= 122
+  \end{align*}
+}
+
+\frame{
   \frametitle{Coordinates in the plane}
   Right handed Cartesian axes:
   \begin{center}
@@ -146,8 +161,7 @@
 
 \frame{
   \frametitle{Solving Linear Equations}
-  In general equations of the form:
-  $$y = mx + c$$ are solved by multiplying or adding various constants.
+  In linear equations are solved by multiplying or adding various constants.
 
   \begin{alignat*}{2}
     0 = -0.54x + 3.27 \quad
@@ -159,24 +173,6 @@
     -3.27 \times {1 \over -0.54} &&= 0.54x \times {1 \over -0.54}\\
       &\Leftrightarrow
     6.06 &&\approx x
-  \end{alignat*}
-}
-
-\frame{
-  \frametitle{Solving Linear Equations}
-  In general equations of the form:
-  $$y = mx + c$$ are solved by multiplying or adding various constants.
-  
-  \begin{alignat*}{2}
-    y = mx + c
-      &\Leftrightarrow
-    y - c &&= (mx + c) - c\\
-      &\Leftrightarrow
-    y - c &&= mx\\
-      &\Leftrightarrow
-    (y - c) \times {1 \over m} &&= mx \times {1 \over m}\\
-      &\Leftrightarrow
-    {y - c \over m} &&= x
   \end{alignat*}
 }
 
@@ -315,7 +311,8 @@ Various techniques can be used to solve such a problem.
   Technique often used to prove algebraic relationships. Basic idea:
   \begin{itemize}
     \item Prove that something is true at the start.
-    \item Prove that if something is true at point $k$ then it is true at point $k + 1$.
+    \item Prove that if something is true at point $k$ then it is true at point
+    $k + 1$.
   \end{itemize}
   \only<1>{
     \begin{center}
@@ -362,6 +359,22 @@ Various techniques can be used to solve such a problem.
 }
 
 \frame{
+  \frametitle{Infinite Sums}
+  \begin{align*}
+  S &= \sum_{k=0}^\infty a^k\\
+  S &= a^0 + a^1 + a^2 + a^3 + a^4 + \dots\\
+  aS &= a^1 + a^2 + a^3 + a^4 + a^5 + \dots
+  \end{align*}
+  Consider $S - aS$:
+  \begin{align*}
+  S - aS &= a^0\\
+  S - aS &= 1\\
+  S(1 - a) &= 1\\
+  S &= {1 \over (1-a)}
+  \end{align*}
+}
+
+\frame{
   \begin{block}{\begin{center}\huge{\textbf{\textit{Calculus}}}\end{center}}
   \vspace{5mm}
   \end{block}
@@ -396,20 +409,6 @@ Various techniques can be used to solve such a problem.
   \begin{center}
     \includegraphics[width=7cm]{complicated_function}
   \end{center}
-}
-
-\frame{
-  \frametitle{Even and Odd Functions}
-  \begin{itemize}
-    \item If $f(-x) = f(x)$ for all $x$ in its domain then $f$ is \textit{even}:
-    \begin{center}
-      \includegraphics[width=5cm]{even_function}
-    \end{center}
-    \item If $f(-x) = -f(x)$ for all $x$ in its domain then $f$ is \textit{odd}:
-    \begin{center}
-      \includegraphics[width=5cm]{odd_function}
-    \end{center}
-  \end{itemize}
 }
 
 \frame{
@@ -452,24 +451,33 @@ Various techniques can be used to solve such a problem.
   \frametitle{Derivative}
     The derivative of a function $f$ at a number $a$, denoted by $f'(a)$ is:
     $$f'(a) = \lim_{h \to 0}{f(a + h) - f(a) \over h}$$
+    \pause
+    \\[20mm]
+    For polynomials:
+    \begin{align*}
+      & f = x^n\\
+      \implies & f' = nx^{n-1}
+    \end{align*}
 }
 
 \frame{
   \frametitle{Exercise}
-    Find the derivative of $$f(x) = x^2 - 3x + 2$$ at the number $a$.
+    Find the derivative of $$f(x) = x^2 - 3x + 2$$ at $x = 6$.
 }
 
 \frame{
   \frametitle{Solution}
-  \begin{align*}
-    f'(a)
-    &= \lim_{h \to 0}{f(a + h) - f(a) \over h}\\
-    &= \lim_{h \to 0}{\left((a + h)^2 - 3(a + h) + 2 \right) - \left(a^2 - 3a + 2 \right) - f(a) \over h}\\
-    &= \lim_{h \to 0}{a^2 + 2ah + h^2 - 3a - 3h + 2 - a^2 + 3a - 2 \over h}\\
-    &= \lim_{h \to 0}{2ah + h^2 - 3h \over h}\\
-    &= \lim_{h \to 0}{2a + h - 3}\\
-    &= 2a - 3
-  \end{align*}
+  \begin{alignat*}{4}
+    f(x) &= x^2 &&- 3x &&+ 2\\
+    f(x) &= 1 \times x^2 &&- 3 \times x^1 &&+ 2 \times x^0\\
+    & && &&&\\
+    f'(x) &= 1 \times 2 \times x^{2 - 1} &&- 3 \times 1 \times x^{1 - 1} &&+ 2 \times 0 \times x^{0 - 1}\\
+    f'(x) &= 2x^1 &&- 3x^0 &&+ 0\\
+    f'(x) &= 2x &&- 3 &&\\
+    & && &&\\
+    f'(6) &= 2 \times 6 &&- 3 &&\\
+    f'(6) &= 9 && &&
+  \end{alignat*}
 }
 
 \frame{
@@ -765,9 +773,23 @@ $$\int f(x)dx = F(x) \; \text{ \color{black}{means} } \; {d \over dx}F=f$$
   Variance: $$Var(X) = \int_{-\infty}^{\infty} \left(x - E(X)\right)^2 f(x)dx$$
 }
 
-\frame{\frametitle{Exercise}
+\frame{
+  \frametitle{Exercise}
   Find the mean of the negative exponential distribution:
   $$f(x) = \lambda  e^{-\lambda x} \text{ \color{black}{defined for} } 0 < x < \infty$$
+}
+
+\frame{
+  \frametitle{Solution}
+  \begin{alignat*}{2}
+  E(X) &= \int_0^\infty x f(x) dx\\
+  &= \lambda \int_0^\infty x e^{-\lambda x} dx\\
+  &= \lambda \left(uv - \int v du \right)_0^\infty\\
+  &= \lambda \left[{x \over \lambda} e^{-\lambda x} + \int {1 \over \lambda} e^{-\lambda x} \right]_0^\infty\\
+  &= \lambda \left[{x \over \lambda} e^{-\lambda x} + {1 \over \lambda^2} e^{-\lambda x} \right]_0^\infty\\
+  &= \left[xe^{-\lambda x} + {1 \over \lambda} e^{-\lambda x} \right]_0^\infty\\
+  &= 0 - 0 - 0 + {1 \over \lambda} = {1 \over \lambda}
+  \end{alignat*}
 }
 
 \frame{
